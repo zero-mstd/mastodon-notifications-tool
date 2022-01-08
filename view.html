@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="./assets/style.css" />
+<title>Mastodon Notifications</title>
+</head>
+<body>
+<div id="content"></div>
+<div id="notis">
+<h1>Mastodon Notifications</h1>
+<fieldset>
+Select the file: <label>notifications.json
+<input accept="application/json" id="noti-file-input" type="file" style="display:none">
+</label>
+<br>Type filter:
+<label><input name="c-type" type="checkbox" checked="checked" value="status" />status</label>
+<label><input name="c-type" type="checkbox" checked="checked" value="mention" />mention</label>
+<label><input name="c-type" type="checkbox" checked="checked" value="poll" />poll</label>
+<label><input name="c-type" type="checkbox" checked="checked" value="reblog" />reblog</label>
+<label><input name="c-type" type="checkbox" checked="checked" value="favourite" />favourite</label>
+<label><input name="c-type" type="checkbox" checked="checked" value="follow" />follow</label>
+<label><input name="c-type" type="checkbox" checked="checked" value="follow_request" />follow_request</label>
+<br>Search (User/Status URL/Status Content): <input placeholder="space as logical AND" class="search-status" />
+<br><button class="sort" data-sort="i">Sort by ID</button>
+<button class="sort" data-sort="u">Sort by User</button>
+</fieldset>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Created At</th>
+            <th>User</th>
+            <th>Status URL</th>
+            <th class="c">you can’t see me~~~</th>
+            <th>Status Content</th>
+        </tr>
+    </thead>
+    <tbody class="notifications">
+        <!-- data here -->
+    </tbody>
+</table>
+<template id="tr-temp">
+    <tr>
+        <td class="i"></td>
+        <td class="t"></td>
+        <td class="a"></td>
+        <td class="u"></td>
+        <td class="s"></td>
+        <td class="c"></td>
+        <td onclick="show(this)">Click Me</td>
+    </tr>
+</template>
+</div>
+<script type="text/javascript" src="./assets/list.js"></script>
+<!-- Why I don’t use the list.min.js: -->
+<!--     https://github.com/javve/list.js/issues/699 -->
+<script type="text/javascript" src="./assets/main.js"></script>
+</body>
+</html>
