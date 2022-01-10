@@ -71,7 +71,7 @@ while 1:
     q = 0    # item count in this page
     for e in nj:
         i = e['id']
-        if i == since_id:
+        if i <= since_id:
             p = 0    # used for break outsider
             break
         t = e['type']
