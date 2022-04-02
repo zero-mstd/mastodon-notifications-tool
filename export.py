@@ -81,8 +81,12 @@ while 1:
             s = '-'
             c = '-'
         else:
-            s = e['status']['url']
-            c = e['status']['content']
+            if e['status'] == None:
+                s = 'None'
+                c = 'None'
+            else:
+                s = e['status']['url']
+                c = e['status']['content']
         deal_with_data(data, i, t, a, u, s, c)
         q = q + 1
     print('Page ' + str(p) + ', ' + str(q) + ' notifications.', end=" ")
