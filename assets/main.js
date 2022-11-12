@@ -56,6 +56,7 @@ function deal_with_noti(noti) {
         searchClass: 'search-status',
         searchColumns: ['u', 's', 'c'],
         searchDelay: 500,
+        pagination: false,
     };
 
     notisTable = new List('notis', options);

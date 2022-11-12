@@ -36,4 +36,8 @@ python export.py --continue
 # If you got new notifications since last time you export,
 #    you can execute the following command to update new data:
 python export.py --update
+
+# If your data is out of order or duplicated,
+#    you can use `trim.py` to reorganize.
+python trim.py
 ```
